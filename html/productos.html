@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | San Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="logo-icon">
+                <img src="../img/logo-sanmarcos.png" alt="Logo San Marcos"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=&quot;bi bi-heart-pulse-fill&quot;></i>';">
+            </div>
+            <div class="ms-2">
+                <span class="logo-title">San Marcos</span>
+                <small class="d-block logo-subtitle">Veterinaria</small>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li><li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li><li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li><li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            </ul>
+            <div class="actions d-flex align-items-center gap-3">
+                <a href="login.html" class="login-link">Iniciar sesión</a>
+                <a href="registro.html" class="btn btn-success btn-sm">Registrarse</a>
+                <a href="carrito.html" class="cart-link" aria-label="Carrito">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-number">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main>
+<section class="page-hero">
+    <div class="container">
+        <span class="section-label">TIENDA SAN MARCOS</span>
+        <h1>Medicamentos y vacunas</h1>
+        <p>Catálogo de productos en stock, organizado por categoría y con la información indicada en la planilla de Veterinaria San Marcos.</p>
+    </div>
+</section>
+<section class="section">
+<div class="container">
+    <div class="filters mb-5">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Buscar producto</label>
+                <input id="buscarProducto" class="form-control" type="search" placeholder="Nombre o principio activo...">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Categoría</label>
+                <select id="filtroProducto" class="form-select">
+                    <option value="">Todas las categorías</option>
+                    <option>Antibióticos</option><option>Antiparasitarios</option>
+                    <option>Antiinflamatorios</option><option>Dermatología</option>
+                    <option>Digestivo</option><option>Cardíaco</option><option>Analgésicos</option>
+                    <option>Vacunas</option><option>Suplementos</option>
+                </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <a href="carrito.html" class="btn btn-outline-success w-100">Carrito</a>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4" id="catalogoProductos">
+
+<div class="col-md-6 col-lg-4 product-item" data-category="Antibióticos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-capsule"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antibióticos</span>
+        <h3>Amoxibay 250mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Amoxicilina</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 45</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$4.200</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Amoxibay 250mg" data-precio="4200" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antibióticos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-capsule"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antibióticos</span>
+        <h3>Enrox 50mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Enrofloxacino</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 30</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$6.800</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Enrox 50mg" data-precio="6800" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antibióticos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-capsule"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antibióticos</span>
+        <h3>Metrobay 250mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Metronidazol</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 28</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$3.900</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Metrobay 250mg" data-precio="3900" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiparasitarios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bug"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiparasitarios</span>
+        <h3>Nexgard</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Afoxolaner</p>
+        <p class="mb-2"><strong>Presentación:</strong> Masticable 1 unid.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 60</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$9.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Nexgard" data-precio="9500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiparasitarios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bug"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiparasitarios</span>
+        <h3>Bravecto</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Fluralaner</p>
+        <p class="mb-2"><strong>Presentación:</strong> Masticable 1 unid.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 40</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$18.900</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Bravecto" data-precio="18900" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiparasitarios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bug"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiparasitarios</span>
+        <h3>Revolution Plus</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Selamectina+Sarolaner</p>
+        <p class="mb-2"><strong>Presentación:</strong> Pipeta 1 unid.</p>
+        <p class="mb-3"><strong>Especie:</strong> Gato · <strong>Stock:</strong> 35</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$14.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Revolution Plus" data-precio="14500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiparasitarios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bug"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiparasitarios</span>
+        <h3>Drontal Plus</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Praziquantel+Pamoato</p>
+        <p class="mb-2"><strong>Presentación:</strong> Comprimido 1 unid.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 80</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$3.200</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Drontal Plus" data-precio="3200" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiparasitarios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bug"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiparasitarios</span>
+        <h3>Milbemax Gato</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Milbemicina+Praziq.</p>
+        <p class="mb-2"><strong>Presentación:</strong> Comprimido 2 unid.</p>
+        <p class="mb-3"><strong>Especie:</strong> Gato · <strong>Stock:</strong> 50</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$6.800</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Milbemax Gato" data-precio="6800" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiinflamatorios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-capsule"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiinflamatorios</span>
+        <h3>Meloxicam 1mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Meloxicam</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 55</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$4.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Meloxicam 1mg" data-precio="4500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Antiinflamatorios">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-capsule"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Antiinflamatorios</span>
+        <h3>Carprofen 50mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Carprofeno</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 30</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$9.800</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Carprofen 50mg" data-precio="9800" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Dermatología">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-droplet"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Dermatología</span>
+        <h3>Clorhexidina shampoo</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Clorhexidina 2%</p>
+        <p class="mb-2"><strong>Presentación:</strong> Frasco 250ml</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 25</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$8.900</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Clorhexidina shampoo" data-precio="8900" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Dermatología">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-droplet"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Dermatología</span>
+        <h3>Malaseb shampoo</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Miconazol+Clorhex.</p>
+        <p class="mb-2"><strong>Presentación:</strong> Frasco 250ml</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 20</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$12.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Malaseb shampoo" data-precio="12500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Dermatología">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-droplet"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Dermatología</span>
+        <h3>Apoquel 16mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Oclacitinib</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 18</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$22.000</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Apoquel 16mg" data-precio="22000" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Digestivo">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-activity"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Digestivo</span>
+        <h3>Probifor</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Bacillus clausii</p>
+        <p class="mb-2"><strong>Presentación:</strong> Sobre 5ml x10</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 40</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$5.600</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Probifor" data-precio="5600" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Digestivo">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-activity"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Digestivo</span>
+        <h3>Omeprazol 10mg vet</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Omeprazol</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 35</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$3.800</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Omeprazol 10mg vet" data-precio="3800" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Cardíaco">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-heart-pulse"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Cardíaco</span>
+        <h3>Vetmedin 2.5mg</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Pimobendan</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 15</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$28.000</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Vetmedin 2.5mg" data-precio="28000" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Analgésicos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-bandaid"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Analgésicos</span>
+        <h3>Tramadol 50mg vet</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Tramadol</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 10 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 22</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$5.200</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Tramadol 50mg vet" data-precio="5200" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Vacunas">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-shield-plus"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Vacunas</span>
+        <h3>Nobivac DHPPi</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Vacuna polivalente</p>
+        <p class="mb-2"><strong>Presentación:</strong> Vial 1 dosis</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 48</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$8.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Nobivac DHPPi" data-precio="8500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Vacunas">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-shield-plus"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Vacunas</span>
+        <h3>Nobivac Rabies</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Vacuna antirrábica</p>
+        <p class="mb-2"><strong>Presentación:</strong> Vial 1 dosis</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 60</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$5.800</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Nobivac Rabies" data-precio="5800" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Vacunas">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-shield-plus"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Vacunas</span>
+        <h3>Felocell CVR</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Vacuna triple felina</p>
+        <p class="mb-2"><strong>Presentación:</strong> Vial 1 dosis</p>
+        <p class="mb-3"><strong>Especie:</strong> Gato · <strong>Stock:</strong> 36</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$7.200</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Felocell CVR" data-precio="7200" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Suplementos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-heart"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Suplementos</span>
+        <h3>Omega vet 3-6-9</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Ácidos grasos omega</p>
+        <p class="mb-2"><strong>Presentación:</strong> Frasco 100ml</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro / Gato · <strong>Stock:</strong> 30</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$9.900</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Omega vet 3-6-9" data-precio="9900" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 product-item" data-category="Suplementos">
+<div class="product-card">
+    <div class="product-image"><div class="product-placeholder"><i class="bi bi-heart"></i></div></div>
+    <div class="product-body">
+        <span class="product-category">Suplementos</span>
+        <h3>Condrovet forte</h3>
+        <p class="mb-2"><strong>Principio activo:</strong> Condroitín+Glucos.</p>
+        <p class="mb-2"><strong>Presentación:</strong> Blíster 30 comp.</p>
+        <p class="mb-3"><strong>Especie:</strong> Perro · <strong>Stock:</strong> 25</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="product-price">$14.500</span>
+            <button class="btn btn-success add-to-cart" data-nombre="Condrovet forte" data-precio="14500" data-imagen="">
+                <i class="bi bi-cart-plus me-1"></i>Agregar
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+</section>
+</main>
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="footer-logo"><i class="bi bi-heart-pulse-fill me-2"></i>San Marcos</div>
+                <p class="mt-3">Cuidamos a tus mascotas con dedicación, cariño y atención profesional.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h5>Navegación</h5>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <h5>Cuenta</h5>
+                <a href="login.html">Iniciar sesión</a>
+                <a href="registro.html">Crear cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+            <div class="col-lg-3">
+                <h5>Contáctanos</h5>
+                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Av. San Marcos 123</p>
+                <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>+56 9 1234 5678</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>contacto@sanmarcos.cl</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <span>© 2026 San Marcos Veterinaria</span>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../js/apps.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

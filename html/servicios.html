@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | San Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="logo-icon">
+                <img src="../img/logo-sanmarcos.png" alt="Logo San Marcos"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=&quot;bi bi-heart-pulse-fill&quot;></i>';">
+            </div>
+            <div class="ms-2">
+                <span class="logo-title">San Marcos</span>
+                <small class="d-block logo-subtitle">Veterinaria</small>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li><li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li><li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li><li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            </ul>
+            <div class="actions d-flex align-items-center gap-3">
+                <a href="login.html" class="login-link">Iniciar sesión</a>
+                <a href="registro.html" class="btn btn-success btn-sm">Registrarse</a>
+                <a href="carrito.html" class="cart-link" aria-label="Carrito">
+                    <i class="bi bi-cart3"></i>
+                    <span class="cart-number">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main>
+<section class="page-hero">
+    <div class="container">
+        <span class="section-label">CATÁLOGO</span>
+        <h1>Servicios veterinarios</h1>
+        <p>Consulta los servicios de Veterinaria San Marcos con su código, categoría, especie, duración aproximada, precio y observaciones.</p>
+    </div>
+</section>
+<section class="section">
+<div class="container">
+    <div class="filters mb-4">
+        <div class="row g-3 align-items-end">
+            <div class="col-md-5">
+                <label class="form-label">Buscar servicio</label>
+                <input id="buscarServicio" class="form-control" type="search" placeholder="Ej: consulta, vacuna, cirugía...">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Categoría</label>
+                <select id="filtroServicio" class="form-select">
+                    <option value="">Todas las categorías</option>
+                    <option>Consultas</option><option>Vacunación</option><option>Cirugía</option>
+                    <option>Desparasitación</option><option>Exámenes</option><option>Otros</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <a href="contacto.html" class="btn btn-success w-100">Consultar atención</a>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive bg-white rounded-4 border p-2">
+        <table class="table align-middle mb-0" id="tablaServicios">
+            <thead><tr><th>Código</th><th>Categoría</th><th>Servicio</th><th>Especie</th><th>Duración</th><th>Precio</th><th>Observaciones</th></tr></thead>
+            <tbody>
+<tr class="service-row" data-category="Consultas">
+    <td><span class="code">SV001</span></td>
+    <td>Consultas</td>
+    <td><strong>Consulta general</strong></td>
+    <td>Perro / Gato</td>
+    <td>30 min</td>
+    <td><strong>$15.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Consultas">
+    <td><span class="code">SV002</span></td>
+    <td>Consultas</td>
+    <td><strong>Consulta urgencia</strong></td>
+    <td>Perro / Gato</td>
+    <td>30 min</td>
+    <td><strong>$25.000</strong></td>
+    <td>Fuera de horario +$10.000</td>
+</tr>
+<tr class="service-row" data-category="Consultas">
+    <td><span class="code">SV003</span></td>
+    <td>Consultas</td>
+    <td><strong>Control postoperatorio</strong></td>
+    <td>Perro / Gato</td>
+    <td>20 min</td>
+    <td><strong>$10.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Consultas">
+    <td><span class="code">SV004</span></td>
+    <td>Consultas</td>
+    <td><strong>Consulta ave / conejo</strong></td>
+    <td>Ave / Conejo</td>
+    <td>30 min</td>
+    <td><strong>$18.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Consultas">
+    <td><span class="code">SV005</span></td>
+    <td>Consultas</td>
+    <td><strong>Segunda opinión médica</strong></td>
+    <td>Todas</td>
+    <td>40 min</td>
+    <td><strong>$20.000</strong></td>
+    <td>Requiere ficha previa</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA001</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna antirrábica canina</strong></td>
+    <td>Perro</td>
+    <td>10 min</td>
+    <td><strong>$12.000</strong></td>
+    <td>Obligatoria por ley</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA002</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna sextuple canina</strong></td>
+    <td>Perro</td>
+    <td>10 min</td>
+    <td><strong>$18.000</strong></td>
+    <td>Refuerzo anual</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA003</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna bivalente felina</strong></td>
+    <td>Gato</td>
+    <td>10 min</td>
+    <td><strong>$15.000</strong></td>
+    <td>Refuerzo anual</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA004</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna triple felina</strong></td>
+    <td>Gato</td>
+    <td>10 min</td>
+    <td><strong>$17.000</strong></td>
+    <td>Refuerzo anual</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA005</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna Bordetella canina</strong></td>
+    <td>Perro</td>
+    <td>10 min</td>
+    <td><strong>$14.000</strong></td>
+    <td>Tos de las perreras</td>
+</tr>
+<tr class="service-row" data-category="Vacunación">
+    <td><span class="code">VA006</span></td>
+    <td>Vacunación</td>
+    <td><strong>Vacuna antirrábica felina</strong></td>
+    <td>Gato</td>
+    <td>10 min</td>
+    <td><strong>$12.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI001</span></td>
+    <td>Cirugía</td>
+    <td><strong>Esterilización hembra canina</strong></td>
+    <td>Perra</td>
+    <td>90 min</td>
+    <td><strong>$80.000</strong></td>
+    <td>Incluye anestesia y hospitalización 24h</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI002</span></td>
+    <td>Cirugía</td>
+    <td><strong>Esterilización macho canino</strong></td>
+    <td>Perro</td>
+    <td>60 min</td>
+    <td><strong>$60.000</strong></td>
+    <td>Incluye anestesia</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI003</span></td>
+    <td>Cirugía</td>
+    <td><strong>Esterilización hembra felina</strong></td>
+    <td>Gata</td>
+    <td>60 min</td>
+    <td><strong>$65.000</strong></td>
+    <td>Incluye anestesia y hospitalización 12h</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI004</span></td>
+    <td>Cirugía</td>
+    <td><strong>Esterilización macho felino</strong></td>
+    <td>Gato</td>
+    <td>45 min</td>
+    <td><strong>$50.000</strong></td>
+    <td>Incluye anestesia</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI005</span></td>
+    <td>Cirugía</td>
+    <td><strong>Extirpación de tumor cutáneo</strong></td>
+    <td>Perro / Gato</td>
+    <td>60 min</td>
+    <td><strong>$120.000</strong></td>
+    <td>Precio referencial; varía según tamaño</td>
+</tr>
+<tr class="service-row" data-category="Cirugía">
+    <td><span class="code">CI006</span></td>
+    <td>Cirugía</td>
+    <td><strong>Cesárea de urgencia</strong></td>
+    <td>Perra / Gata</td>
+    <td>120 min</td>
+    <td><strong>$180.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Desparasitación">
+    <td><span class="code">DE001</span></td>
+    <td>Desparasitación</td>
+    <td><strong>Desparasitación interna pequeños (<10 kg)</strong></td>
+    <td>Perro</td>
+    <td>5 min</td>
+    <td><strong>$8.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Desparasitación">
+    <td><span class="code">DE002</span></td>
+    <td>Desparasitación</td>
+    <td><strong>Desparasitación interna medianos (10-25 kg)</strong></td>
+    <td>Perro</td>
+    <td>5 min</td>
+    <td><strong>$9.500</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Desparasitación">
+    <td><span class="code">DE003</span></td>
+    <td>Desparasitación</td>
+    <td><strong>Desparasitación interna grandes (>25 kg)</strong></td>
+    <td>Perro</td>
+    <td>5 min</td>
+    <td><strong>$11.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Desparasitación">
+    <td><span class="code">DE004</span></td>
+    <td>Desparasitación</td>
+    <td><strong>Desparasitación interna felina</strong></td>
+    <td>Gato</td>
+    <td>5 min</td>
+    <td><strong>$8.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Desparasitación">
+    <td><span class="code">DE005</span></td>
+    <td>Desparasitación</td>
+    <td><strong>Antiparasitario externo (pipeta)</strong></td>
+    <td>Perro / Gato</td>
+    <td>5 min</td>
+    <td><strong>$7.500</strong></td>
+    <td>Incluye aplicación</td>
+</tr>
+<tr class="service-row" data-category="Exámenes">
+    <td><span class="code">EX001</span></td>
+    <td>Exámenes</td>
+    <td><strong>Hemograma completo</strong></td>
+    <td>Perro / Gato</td>
+    <td>30 min</td>
+    <td><strong>$22.000</strong></td>
+    <td>Resultado en 24-48 h</td>
+</tr>
+<tr class="service-row" data-category="Exámenes">
+    <td><span class="code">EX002</span></td>
+    <td>Exámenes</td>
+    <td><strong>Perfil bioquímico completo</strong></td>
+    <td>Perro / Gato</td>
+    <td>30 min</td>
+    <td><strong>$35.000</strong></td>
+    <td>Resultado en 24-48 h</td>
+</tr>
+<tr class="service-row" data-category="Exámenes">
+    <td><span class="code">EX003</span></td>
+    <td>Exámenes</td>
+    <td><strong>Radiografía (1 proyección)</strong></td>
+    <td>Perro / Gato</td>
+    <td>20 min</td>
+    <td><strong>$28.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Exámenes">
+    <td><span class="code">EX004</span></td>
+    <td>Exámenes</td>
+    <td><strong>Ecografía abdominal</strong></td>
+    <td>Perro / Gato</td>
+    <td>30 min</td>
+    <td><strong>$45.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Exámenes">
+    <td><span class="code">EX005</span></td>
+    <td>Exámenes</td>
+    <td><strong>Test de leishmaniasis</strong></td>
+    <td>Perro</td>
+    <td>20 min</td>
+    <td><strong>$18.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Otros">
+    <td><span class="code">OT001</span></td>
+    <td>Otros</td>
+    <td><strong>Corte de uñas</strong></td>
+    <td>Perro / Gato</td>
+    <td>15 min</td>
+    <td><strong>$5.000</strong></td>
+    <td>—</td>
+</tr>
+<tr class="service-row" data-category="Otros">
+    <td><span class="code">OT002</span></td>
+    <td>Otros</td>
+    <td><strong>Limpieza dental</strong></td>
+    <td>Perro / Gato</td>
+    <td>45 min</td>
+    <td><strong>$55.000</strong></td>
+    <td>Requiere anestesia</td>
+</tr>
+<tr class="service-row" data-category="Otros">
+    <td><span class="code">OT003</span></td>
+    <td>Otros</td>
+    <td><strong>Microchip identificación</strong></td>
+    <td>Perro / Gato</td>
+    <td>10 min</td>
+    <td><strong>$15.000</strong></td>
+    <td>Incluye registro</td>
+</tr>
+<tr class="service-row" data-category="Otros">
+    <td><span class="code">OT004</span></td>
+    <td>Otros</td>
+    <td><strong>Hospitalización (por día)</strong></td>
+    <td>Perro / Gato</td>
+    <td>24 h</td>
+    <td><strong>$30.000</strong></td>
+    <td>Incluye monitoreo y alimentación básica</td>
+</tr></tbody>
+        </table>
+    </div>
+    <div class="alert alert-success mt-4">
+        <i class="bi bi-info-circle me-2"></i>
+        Los valores mostrados corresponden al catálogo proporcionado para Veterinaria San Marcos.
+    </div>
+</div>
+</section>
+</main>
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="footer-logo"><i class="bi bi-heart-pulse-fill me-2"></i>San Marcos</div>
+                <p class="mt-3">Cuidamos a tus mascotas con dedicación, cariño y atención profesional.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h5>Navegación</h5>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <h5>Cuenta</h5>
+                <a href="login.html">Iniciar sesión</a>
+                <a href="registro.html">Crear cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+            <div class="col-lg-3">
+                <h5>Contáctanos</h5>
+                <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Av. San Marcos 123</p>
+                <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>+56 9 1234 5678</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>contacto@sanmarcos.cl</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <span>© 2026 San Marcos Veterinaria</span>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../js/apps.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
